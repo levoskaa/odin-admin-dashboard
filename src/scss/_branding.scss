@@ -1,0 +1,15 @@
+@use "_mixins";
+
+.branding {
+  @include mixins.align-center(flex-start);
+  gap: 0.5rem;
+
+  &__logo {
+    @include mixins.size(2.75rem);
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.75rem;
+  }
+}
