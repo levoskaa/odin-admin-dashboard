@@ -72,23 +72,48 @@ table {
 .sidebar {
   background-color: #1992d4;
   color: #ffffff;
-  fill: #ffffff;
   padding: 1rem;
 }
-
-.branding {
+.sidebar .branding {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
+  margin-bottom: 2.5rem;
 }
-.branding__logo {
+.sidebar .branding__logo {
   width: 2.75rem;
   height: 2.75rem;
 }
-.branding__title {
+.sidebar .branding__title {
   font-weight: 600;
   font-size: 1.75rem;
+}
+.sidebar .side-nav {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.sidebar .side-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .side-nav ul .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.375rem 0;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+}
+.sidebar .side-nav ul .nav-link:hover {
+  background-color: #1783bf;
+}
+.sidebar .side-nav ul .nav-link .icon {
+  margin: 0 0.725rem;
+}
+.sidebar .side-nav ul .nav-link.communities {
+  margin-bottom: 2.5rem;
 }
 
 *,
@@ -100,6 +125,11 @@ table {
 html {
   box-sizing: inherit;
   font-family: "Roboto Flex", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*# sourceMappingURL=styles.css.map */

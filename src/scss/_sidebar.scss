@@ -1,7 +1,54 @@
+@use "sass:color";
 @use "_variables" as vars;
+@use "_mixins";
 
 .sidebar {
   background-color: vars.$primary;
   color: vars.$bg-100;
   padding: 1rem;
+
+  .branding {
+    @include mixins.align-center(flex-start);
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+
+    &__logo {
+      @include mixins.size(2.75rem);
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 1.75rem;
+    }
+  }
+
+  .side-nav {
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      .nav-link {
+        @include mixins.align-center(flex-start);
+        gap: 0.5rem;
+        padding: 0.375rem 0;
+        margin: 0.25rem 0;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: color.scale(vars.$primary, $lightness: -10%);
+        }
+
+        .icon {
+          margin: 0 0.725rem;
+        }
+
+        &.communities {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
 }

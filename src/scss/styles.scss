@@ -1,7 +1,6 @@
 @use "_reset";
 @use "_dashboard";
 @use "_sidebar";
-@use "_branding";
 @use "_variables" as vars;
 
 *,
@@ -13,4 +12,9 @@
 html {
   box-sizing: inherit;
   font-family: vars.$font-family;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
