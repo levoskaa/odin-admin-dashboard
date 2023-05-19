@@ -1,0 +1,11 @@
+@use "_dashboard";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
