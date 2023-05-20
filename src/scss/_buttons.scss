@@ -1,5 +1,6 @@
 @use "_variables" as vars;
 @use "_mixins";
+@use "sass:color";
 
 button {
   @include mixins.box-reset;
@@ -11,6 +12,21 @@ button {
   &:focus-visible {
     outline: 2px solid vars.$primary;
     outline-offset: 2px;
+  }
+}
+
+.btn {
+  background-color: vars.$primary;
+  color: vars.$bg-100;
+  font-weight: 600;
+  // Large radius so that the sum of radii are bigger than the border-box.
+  // This way the browser must reduce them proportionally and we get a pill shape.
+  border-radius: 999px;
+  padding: 0.5em 1.5em;
+  transition: background-color 250ms ease-in-out;
+
+  &:hover {
+    background-color: color.scale(vars.$primary, $lightness: -10%);
   }
 }
 
