@@ -1,0 +1,32 @@
+@use "_variables" as vars;
+@use "_mixins";
+
+.page-header {
+  background-color: vars.$bg-100;
+  padding: 1rem 2rem;
+
+  &__top {
+    @include mixins.align-center(flex-start);
+    gap: 1.5rem;
+    font-size: 1.3rem;
+
+    .icon {
+      flex: 0 0 auto;
+    }
+
+    [type="search"] {
+      margin-right: auto;
+      width: clamp(300px, 45%, 500px);
+    }
+
+    .avatar {
+      height: 2.75rem;
+      width: auto;
+    }
+
+    .username {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "_variables" as vars;
+
+input,
+select,
+textarea {
+  font: inherit;
+  outline: none;
+  border: 2px solid transparent;
+
+  &:focus {
+    border-color: vars.$primary;
+  }
+}
+
+input,
+textarea {
+  font-size: max(16px, 100%);
+}
+
+input[type="search"] {
+  appearance: none;
+  background-color: vars.$bg-200;
+  border-radius: 1em;
+  padding: 0.2em 0.5em;
+}

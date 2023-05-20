@@ -1,0 +1,19 @@
+@use "_variables" as vars;
+@use "_mixins";
+
+button {
+  @include mixins.box-reset;
+  cursor: pointer;
+  font: inherit;
+  background-color: transparent;
+  border: none;
+
+  &:focus-visible {
+    outline: 2px solid vars.$primary;
+    outline-offset: 2px;
+  }
+}
+
+.icon-btn {
+  border-radius: 50%;
+}

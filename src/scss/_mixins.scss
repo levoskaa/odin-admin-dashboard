@@ -8,3 +8,8 @@
   align-items: center;
   justify-content: $justify-content;
 }
+
+@mixin box-reset {
+  padding: 0;
+  margin: 0;
+}
