@@ -3,10 +3,11 @@
 
 $title-font-size: 1.3rem;
 $title-padding: 0.75rem;
+$grid-gap: 1.5rem;
 
 .content {
   background-color: vars.$bg-200;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem 2rem 1rem;
   display: grid;
   grid-template-columns: 1fr 300px;
   grid-template-rows: repeat(2, $title-font-size + $title-padding auto);
@@ -44,7 +45,7 @@ $title-padding: 0.75rem;
     grid-area: main-content;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
-    gap: 1.5rem;
+    gap: $grid-gap;
 
     .project {
       border-left: 8px solid vars.$accent;
@@ -69,6 +70,33 @@ $title-padding: 0.75rem;
         @include mixins.align-center(flex-end);
         gap: 1.5rem;
         font-size: 1.5rem;
+      }
+    }
+  }
+
+  .content__aside-1 {
+    align-self: start;
+    margin-bottom: $grid-gap;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    .announcement {
+      &:not(:last-child) {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #d3d3d3;
+      }
+
+      &__title {
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+      }
+
+      &__description {
+        color: vars.$text-secondary;
+        font-size: 0.8rem;
       }
     }
   }
