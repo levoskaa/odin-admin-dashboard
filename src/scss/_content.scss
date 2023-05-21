@@ -1,0 +1,75 @@
+@use "_variables" as vars;
+@use "_mixins";
+
+$title-font-size: 1.3rem;
+$title-padding: 0.75rem;
+
+.content {
+  background-color: vars.$bg-200;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: repeat(2, $title-font-size + $title-padding auto);
+  grid-template-areas:
+    "main-title   aside-title-1"
+    "main-content aside-content-1"
+    "main-content aside-title-2"
+    "main-content aside-content-2";
+
+  &__title {
+    font-weight: 600;
+    font-size: $title-font-size;
+    text-transform: capitalize;
+
+    &--main {
+      grid-area: main-title;
+    }
+
+    &--aside-1 {
+      grid-area: aside-title-1;
+    }
+
+    &--aside-2 {
+      grid-area: aside-title-2;
+    }
+  }
+
+  .card {
+    background-color: vars.$bg-100;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px hsl(0, 0, 0, 0.2);
+  }
+
+  &__main {
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    gap: 1.5rem;
+
+    .project {
+      border-left: 8px solid vars.$accent;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+      &__name {
+        font-weight: 700;
+        font-size: 1.125rem;
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+      }
+
+      &__description {
+        color: vars.$text-secondary;
+        margin-bottom: 1rem;
+      }
+
+      &__icons {
+        margin-top: auto;
+        @include mixins.align-center(flex-end);
+        gap: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

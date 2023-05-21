@@ -119,6 +119,7 @@ table {
   background-color: #ffffff;
   padding: 1rem 3rem;
   box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.2);
+  z-index: 10;
 }
 .page-header__top {
   display: flex;
@@ -230,6 +231,64 @@ button:focus-visible {
   border-radius: 50%;
 }
 
+.content {
+  background-color: #e2e8f0;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: repeat(2, 2.05rem auto);
+  grid-template-areas: "main-title   aside-title-1" "main-content aside-content-1" "main-content aside-title-2" "main-content aside-content-2";
+}
+.content__title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.content__title--main {
+  grid-area: main-title;
+}
+.content__title--aside-1 {
+  grid-area: aside-title-1;
+}
+.content__title--aside-2 {
+  grid-area: aside-title-2;
+}
+.content .card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.2);
+}
+.content__main {
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  gap: 1.5rem;
+}
+.content__main .project {
+  border-left: 8px solid #f0b42a;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.content__main .project__name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+.content__main .project__description {
+  color: #636363;
+  margin-bottom: 1rem;
+}
+.content__main .project__icons {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
 *,
 *::before,
 *::after {
@@ -244,6 +303,10 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p {
+  line-height: 1.2;
 }
 
 /*# sourceMappingURL=styles.css.map */

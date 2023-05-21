@@ -5,6 +5,8 @@
   background-color: vars.$bg-100;
   padding: 1rem 3rem;
   box-shadow: 0 2px 5px hsl(0, 0, 0, 0.2);
+  // Place header above content, so that box-shadow is visible
+  z-index: 10;
 
   &__top {
     @include mixins.align-center(flex-start);

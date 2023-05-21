@@ -5,6 +5,7 @@
 @use "_avatar";
 @use "_forms";
 @use "_buttons";
+@use "_content";
 @use "_variables" as vars;
 
 *,
@@ -21,4 +22,8 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p {
+  line-height: 1.2;
 }
