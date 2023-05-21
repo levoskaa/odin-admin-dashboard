@@ -16,6 +16,7 @@ $grid-gap: 1.5rem;
     "main-content aside-content-1"
     "main-content aside-title-2"
     "main-content aside-content-2";
+  column-gap: 1rem;
 
   &__title {
     font-weight: 600;
@@ -97,6 +98,37 @@ $grid-gap: 1.5rem;
       &__description {
         color: vars.$text-secondary;
         font-size: 0.8rem;
+      }
+    }
+  }
+
+  .content__aside-2 {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-height: 24rem;
+
+    .trending-item {
+      @include mixins.align-center(flex-start);
+
+      .avatar {
+        height: 2.75rem;
+        width: auto;
+        margin-right: 1rem;
+      }
+
+      &__user-handle {
+        font-weight: 550;
+
+        &::before {
+          content: "@";
+        }
+      }
+
+      &__project-name {
+        color: vars.$text-secondary;
+        text-transform: capitalize;
       }
     }
   }
