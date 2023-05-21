@@ -6,6 +6,11 @@
   background-color: vars.$primary;
   color: vars.$bg-100;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: vars.$sidebar-width;
 
   .branding {
     @include mixins.align-center(flex-start);

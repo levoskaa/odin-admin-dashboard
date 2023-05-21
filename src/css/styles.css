@@ -73,6 +73,11 @@ table {
   background-color: #1992d4;
   color: #ffffff;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
 }
 .sidebar .branding {
   display: flex;
